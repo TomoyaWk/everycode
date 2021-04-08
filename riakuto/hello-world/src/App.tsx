@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { Component, ReactElement } from "react";
 import  CharcterList,  { Character } from "./components/CharacterList";
 import './App.css';
 
-const App: FC = () => {
-  const characters: Character[] =  [
+class App extends Component { 
+  characters: Character[] =  [
     {
       id: 1,
       name: '桜木花道',
@@ -35,16 +35,16 @@ const App: FC = () => {
     }
   ];
 
-  return(
+  render(): ReactElement { 
+    return (
     <div className="container">
       <header>
         <h1>『SLAM DUNK』登場人物</h1>
       </header>
-      <CharcterList school="湘北高校" characters={characters} />
+      <CharcterList school="湘北高校" characters={this.characters} />
     </div>
-  );
-
-
+    );
+  }
 }
 
 export default App;
