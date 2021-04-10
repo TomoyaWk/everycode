@@ -1,5 +1,6 @@
 import { Component, ReactElement } from "react";
 import  CharcterList,  { Character } from "./components/CharacterList";
+import Counter from "./components/Counter";
 import './App.css';
 
 class App extends Component { 
@@ -42,7 +43,9 @@ class App extends Component {
         <h1>『SLAM DUNK』登場人物</h1>
       </header>
       <CharcterList school="湘北高校" characters={this.characters} />
+      <Counter></Counter>
     </div>
+
     );
   }
 }
