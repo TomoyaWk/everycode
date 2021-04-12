@@ -11,12 +11,14 @@ class Counter extends Component<unknown, State> {
         this.state = { count: 0 };
     }
 
-    reset() :void {
+    reset = ():void  => { 
         this.setState( {count: 0} );
-    }
+    };
 
-    increment() :void {
-        this.setState( (state) => ({ count: state.count + 1 }) );
+    increment = ():void => {
+        this.setState(prevState => ({
+            count : prevState.count + 1, 
+        }));
     }
 
     render() : ReactElement {
@@ -38,8 +40,8 @@ class Counter extends Component<unknown, State> {
                     </Statistic>
                     <Card.Content>
                         <div className="ui two-button">
-                            <Button color="red" onClick={ () => this.reset()}>Reset</Button>
-                            <Button color="green" onClick={ () => this.increment()}>CountUp</Button>
+                            <Button color="red" onClick={ this.reset }>Reset</Button>
+                            <Button color="green" onClick={ this.increment }>CountUp</Button>
                         </div>
                     </Card.Content>
                 </Card>
