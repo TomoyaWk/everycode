@@ -2,6 +2,7 @@ import { Component, ReactElement } from "react";
 import  CharcterList,  { Character } from "./components/CharacterList";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
+import HocComponent from "./components/HocComponent";
 import './App.css';
 
 class App extends Component { 
@@ -46,6 +47,7 @@ class App extends Component {
       <CharcterList school="湘北高校" characters={this.characters} />
       <Counter></Counter>
       <Timer></Timer>
+      <HocComponent max={ 10 }></HocComponent>
     </div>
 
     );

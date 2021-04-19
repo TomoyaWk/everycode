@@ -32,7 +32,7 @@ class Timer extends Component<unknown, State> {
         }
         
         tick = (): void => this.setState((prevState) => ({ timeLeft: prevState.timeLeft - 1 }));
-
+            
         reset = (): void => this.setState({ timeLeft : LIMIT });
         
         render = (): ReactElement => {
