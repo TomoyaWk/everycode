@@ -4,6 +4,7 @@ import Timer from "./components/Timer";
 import HocComponent from "./components/HocComponent";
 import HelloComponent from "./components/HelloComponent"
 import Counter from "./components/RpComponent";
+import HookCounter from "./components/HookComponent";
 import './App.css';
 
 class App extends Component { 
@@ -50,6 +51,7 @@ class App extends Component {
       <Timer></Timer>
       <HocComponent max={ 10 }></HocComponent>
       <HelloComponent target="test name"></HelloComponent>
+      <HookCounter></HookCounter>
     </div>
 
     );
