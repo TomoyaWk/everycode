@@ -14,10 +14,9 @@ const EffectTimer: FC<{ limit: number }> = ({ limit }) => {
         return () => clearInterval(timeId);
     }, []);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if(timeLeft === 0) setTimeLeft(limit);
-    });
+    }, [timeLeft, limit]);
 
     return (
         <Card>
