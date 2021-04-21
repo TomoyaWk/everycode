@@ -1,10 +1,12 @@
 import { Component, ReactElement } from "react";
 import  CharcterList,  { Character } from "./components/CharacterList";
+import { Container } from "semantic-ui-react";
 import Timer from "./components/Timer";
 import HocComponent from "./components/HocComponent";
 import HelloComponent from "./components/HelloComponent"
 import Counter from "./components/RpComponent";
 import HookCounter from "./components/HookComponent";
+import EffectTimer from "./components/EffectTimer";
 import './App.css';
 
 class App extends Component { 
@@ -43,17 +45,19 @@ class App extends Component {
   render(): ReactElement { 
     return (
     <div className="container">
+      <Container>
       <header>
         <h1>『SLAM DUNK』登場人物</h1>
       </header>
-      <CharcterList school="湘北高校" characters={this.characters} />
-      <Counter max={ 10 }></Counter>
-      <Timer></Timer>
-      <HocComponent max={ 10 }></HocComponent>
-      <HelloComponent target="test name"></HelloComponent>
-      <HookCounter></HookCounter>
+        <CharcterList school="湘北高校" characters={this.characters} />
+        <Counter max={ 10 }></Counter>
+        <Timer></Timer>
+        <HocComponent max={ 10 }></HocComponent>
+        <HelloComponent target="test name"></HelloComponent>
+        <HookCounter></HookCounter>
+        <EffectTimer limit={ 60 }></EffectTimer>
+      </Container>
     </div>
-
     );
   }
 }
