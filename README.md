@@ -4,3 +4,15 @@
 https://blog-jp.richardimaoka.net/20210328
 
 上記リンクを参考に少しつづ写経やコード片を書いていきたい
+
+- type-orilly
+｜typescriptオライリー本の写経
+
+- nyobi
+｜N予備校プログラミングコース用
+
+- riakuto
+｜『りあくと！』用
+
+- nodebon
+｜ 『Node.js 超入門』用
