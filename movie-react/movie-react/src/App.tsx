@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Row } from "./Component/Row";
+import { Banner } from "./Component/Banner";
+
 import { requests } from "./request";
 
 function App() {
   return (
     <div className="App">
+      <Banner />
       <Row
         title="NETFLIX ORIGUINALS"
         fetchUrl={requests.feachNetflixOriginals}
