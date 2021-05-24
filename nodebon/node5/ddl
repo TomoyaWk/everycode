@@ -1,0 +1,9 @@
+CREATE TABLE user(
+   "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,  
+   "name" TEXT NOT NULL,
+   "mail" TEXT,
+   "age" INTEGER
+ );
+
+INSERT INTO user VALUES(1, "testname", "testtest@example.com", 25);
+INSERT INTO user VALUES(2, "testname2", "testtest22@example.com", 24);
