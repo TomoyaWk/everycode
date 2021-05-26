@@ -1,9 +1,10 @@
-version: '3'
-
+version: "3"
 services:
-  sqlite3:
-    image: nouchka/sqlite3:latest
-    stdin_open: true
-    tty: true
+  node:
+    build: node/.
     volumes:
-      - ./db:/root/db/
+      - ./node:/node
+    working_dir: /node
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
