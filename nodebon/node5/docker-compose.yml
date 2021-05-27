@@ -2,6 +2,11 @@ version: "3"
 services:
   node:
     build: node/.
+    environment: 
+      - USER_NAME
+      - USER_ID
+      - GROUP_NAME
+      - GROUP_ID
     volumes:
       - ./node:/node
     working_dir: /node
