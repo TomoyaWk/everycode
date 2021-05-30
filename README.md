@@ -16,3 +16,9 @@ https://blog-jp.richardimaoka.net/20210328
 
 - nodebon
 ｜ 『Node.js 超入門』用
+
+- movie-react
+｜ Zenn.dev ハンズオン　ネットフリックスクローン
+
+- udmy-react
+｜udemy　react+DjangoAPIで開発
