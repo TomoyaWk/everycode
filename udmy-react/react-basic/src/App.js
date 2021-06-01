@@ -5,21 +5,24 @@ import './App.css';
 // import  BasicUseEff from "./components/BasicUseEff";
 // import TimerContainer from "./components/TimerContainer";
 import ApiFetch from "./components/ApiFetch";
+import AppContext from "./context/AppContext";
+import B from './components/B';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        {/* <Basic name="FOOO!"></Basic> */}
-        {/* <Basic2></Basic2> */}
-        {/* <BasicUseEff /> */}
-        {/* <TimerContainer /> */}
-        <ApiFetch />
-      </header>
-      
-    </div>
+    <AppContext.Provider value={'value from app.js'} >
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <Basic name="FOOO!"></Basic> */}
+          {/* <Basic2></Basic2> */}
+          {/* <BasicUseEff /> */}
+          {/* <TimerContainer /> */}
+          <ApiFetch />
+          <B />
+        </header>
+      </div>
+    </AppContext.Provider>
   );
 }
 
