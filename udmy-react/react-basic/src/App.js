@@ -4,13 +4,14 @@ import './App.css';
 // import Basic2 from './components/Basic2';
 // import  BasicUseEff from "./components/BasicUseEff";
 // import TimerContainer from "./components/TimerContainer";
-import ApiFetch from "./components/ApiFetch";
+// import ApiFetch from "./components/ApiFetch";
 import AppContext from "./context/AppContext";
-import B from './components/B';
+// import B from './components/B';
 // import BasicReducer from './components/BasicReducer';
 
 import {useReducer} from 'react'
-
+import CompB from './components/CompB';
+import Memo from './components/Memo';
 
 const initState = 0;
 const reducer = (currentState, action) => {
@@ -30,7 +31,7 @@ const reducer = (currentState, action) => {
 function App() {
   const [count, dispatch] = useReducer(reducer, initState);
   return (
-    <AppContext.Provider value={'value from app.js'} >
+    <AppContext.Provider value={{countProvided: count, dispatchProvided: dispatch }} >
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -38,9 +39,13 @@ function App() {
           {/* <Basic2></Basic2> */}
           {/* <BasicUseEff /> */}
           {/* <TimerContainer /> */}
-          <ApiFetch />
-          <B />
+          {/* <ApiFetch /> */}
+          {/* <B /> */}
           {/* <BasicReducer /> */}
+          <CompB />
+          Count : {count}
+
+          <Memo />
         </header>
       </div>
     </AppContext.Provider>
