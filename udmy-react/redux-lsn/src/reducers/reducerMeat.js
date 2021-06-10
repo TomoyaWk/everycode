@@ -8,12 +8,6 @@ const reducerMeat = (state=[], action) => {
     };
     default: return state;
   }
-  
-  return (
-    <div>
-      
-    </div>
-  )
 }
 
 export default reducerMeat

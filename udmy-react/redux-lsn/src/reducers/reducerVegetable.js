@@ -8,12 +8,6 @@ const reducerVagetable = (state=[], action) => {
     };
     default: return state;
   }
-  
-  return (
-    <div>
-      
-    </div>
-  )
 }
 
 export default reducerVagetable;
